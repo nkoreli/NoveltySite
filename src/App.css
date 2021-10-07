@@ -11,13 +11,10 @@
 }
 
 .BackgroundMain{
-  position: absolute;
-  width: 1780px;
   height: 800px;
-  left: 10px;
-  top: 10px;
   background: #C4C4C4;
   border-radius: 30px;
+  margin-top: 10px;
   }
 
 .PhoneImg1{
