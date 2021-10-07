@@ -24,7 +24,7 @@ const App = () => {
   useEffect(() => {
     handleResize()
     window.addEventListener("resize", handleResize);
-    window.addEventListener("scroll", ()=>{console.log('sds')});
+    // window.addEventListener("scroll", () => { console.log('sds') });
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -33,43 +33,41 @@ const App = () => {
       style={{
         backgroundColor: "#000000",
         width: windowDimensions.width,
-         height: '280vh',
-        flex:1,
-        overscrollBehavior:'fixed',
-        overflow:'clip'
-        //alignItems: "center",
+        height: '280vh',
+        display:'flex',
+        justifyContent:'center'
       }}
     >
 
-        <BackgroundMain src={"./images/Background.png"} alt={"Background"} />
-        <PhoneImg1 src={"./images/Phone_Img1.png"} alt={"Phone_Img1"} />
-        <NoveltyGlasses src={"./images/Glasses.png"} alt={"Glasses"} />
-        <NoveltyText />
-        <NoveltyPhrase />
-        <NoveltyTodayApp />
-        <PhoneImg2 src={"./images/Phone_Img2.png"} alt={"PhoneImg2"} />
-        <PhoneImg3 src={"./images/Phone_Img3.png"} alt={"PhoneImg3"} />
-        <NoveltyText2 />
-        <NoveltyText3 />
-        <NoveltyText4 />
-        <CopyRight />
-        <NoveltyDevelopment />
-        <AppStoreFrame1
-          src={"./images/AppStoreFrame1.png"}
-          alt={"AppStoreFrame1"}
-        />
-        <AppStoreFrame2
-          src={"./images/AppStoreFrame2.png"}
-          alt={"AppStoreFrame2"}
-        />
-        <GoogleStoreFrame1
-          src={"./images/GoogleStoreFrame1.png"}
-          alt={"GoogleStoreFrame1"}
-        />
-        <GoogleStoreFrame2
-          src={"./images/GoogleStoreFrame2.png"}
-          alt={"GoogleStoreFrame2"}
-        />
+      <BackgroundMain src={"./images/Background.png"} alt={"Background"} />
+      <PhoneImg1 src={"./images/Phone_Img1.png"} alt={"Phone_Img1"} />
+      <NoveltyGlasses src={"./images/Glasses.png"} alt={"Glasses"} />
+      <NoveltyText />
+      <NoveltyPhrase />
+      <NoveltyTodayApp />
+      <PhoneImg2 src={"./images/Phone_Img2.png"} alt={"PhoneImg2"} />
+      <PhoneImg3 src={"./images/Phone_Img3.png"} alt={"PhoneImg3"} />
+      <NoveltyText2 />
+      <NoveltyText3 />
+      <NoveltyText4 />
+      <CopyRight />
+      <NoveltyDevelopment />
+      <AppStoreFrame1
+        src={"./images/AppStoreFrame1.png"}
+        alt={"AppStoreFrame1"}
+      />
+      <AppStoreFrame2
+        src={"./images/AppStoreFrame2.png"}
+        alt={"AppStoreFrame2"}
+      />
+      <GoogleStoreFrame1
+        src={"./images/GoogleStoreFrame1.png"}
+        alt={"GoogleStoreFrame1"}
+      />
+      <GoogleStoreFrame2
+        src={"./images/GoogleStoreFrame2.png"}
+        alt={"GoogleStoreFrame2"}
+      />
 
     </div>
   );
