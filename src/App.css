@@ -18,21 +18,19 @@
   }
 
 .PhoneImg1{
-position: absolute;
-width: 751px;
-height: 731px;
-left: 26px;
-top: 262px;
-
+  position: absolute;
+  width: 751px;
+  height: 731px;
+  top: 262px;
 }
 
 
 .PhoneImg2{
   position: absolute;
-width: 278px;
-height: 498px;
-left: 1081px;
-top: 692px;
+  width: 268px;
+  height: 498px;
+  /* left: 1081px; */
+  top: 692px;
 }
 
 .PhoneImg3{
@@ -47,8 +45,8 @@ top: 1216px;
   position: absolute;
   width : 109.83px;
   height: 44.72px;
-  left: 758px;
-  right: 932.17px;
+  /* left: 40%; */
+  /* right: 932.17px; */
   top: 153px;
   bottom: 1853.28px;
   
@@ -58,8 +56,8 @@ top: 1216px;
   position: absolute;
   width: 150.63px;
   height: 44.72px;
-  left: 891.37px;
-  right: 758px;
+  /* left: calc(40% + 150px); */
+  /* right: 758px; */
   top: 87px;
   bottom: 1853.28px;
   
@@ -79,7 +77,7 @@ top: 1216px;
   position: absolute;
 width: 520px;
 height: 120px;
-left: 519px;
+/* left: 519px; */
 top: 972px;
 
 font-family: 'Manrope';
@@ -100,7 +98,7 @@ color: #FFFFFF;
   position: absolute;
 width: 500px;
 height: 136px;
-left: 839px;
+/* left: 839px; */
 top: 1241px;
 
 
@@ -121,7 +119,7 @@ text-shadow: 0px 4px 50px rgba(146, 85, 10, 0.78);
   position: absolute;
 width: 500px;
 height: 136px;
-left: 839px;
+/* left: 839px; */
 top: 1313px;
 
 
@@ -143,7 +141,7 @@ text-shadow: 0px 4px 50px rgba(146, 85, 10, 0.78);
   position: absolute;
 width: 339px;
 height: 41px;
-left: 839px;
+/* left: 839px; */
 top: 1415px;
 
 font-family: 'Manrope';
@@ -166,67 +164,53 @@ text-shadow: 0px 4px 50px rgba(146, 85, 10, 0.78);
 
 .NoveltyPhrase{
   position: absolute;
-width: 553px;
-height: 120px;
-left: 839px;
-top: 359px;
-
-font-family: 'Manrope';
-font-style: normal;
-font-weight: 800;
-font-size: 60px;
-line-height: 60px;
-/* or 100% */
-
-display: flex;
-align-items: center;
-letter-spacing: -4px;
-
-color: #FFFFFF;
-
-text-shadow: 0px 4px 50px rgba(6, 55, 103, 0.4);
+  width: 553px;  
+  height: 120px;
+  top: 359px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -4px;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 50px rgba(6, 55, 103, 0.4);
 }
 
 .NoveltyTodayApp{
   position: absolute;
-width: 156px;
-height: 20px;
-left: 839px;
-top: 505px;
-
-font-family: 'Manrope';
-font-style: normal;
-font-weight: bold;
-font-size: 20px;
-line-height: 20px;
-/* identical to box height, or 100% */
-
-display: flex;
-align-items: center;
-letter-spacing: -1px;
-
-color: #FFFFFF;
-
-text-shadow: 0px 4px 50px rgba(6, 55, 103, 0.4);
-
+  width: 156px;
+  height: 20px;
+  top: 505px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  /* identical to box height, or 100% */
+  display: flex;
+  align-items: center;
+  letter-spacing: -1px;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 50px rgba(6, 55, 103, 0.4);
 }
 
 .AppStoreFrame1{
   display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-position: absolute;
-width: 133px;
-height: 38px;
-left: 839px;
-top: 590px;
-right:675px;
-bottom:1425px;
-border-radius: 5px;
-
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  position: absolute;
+  width: 133px;
+  height: 38px;
+  top: 590px;
+  /* right:675px; */
+  bottom:1425px;
+  border-radius: 5px;
 }
+
 .GoogleStoreFrame1{
   display: flex;
 flex-direction: row;
@@ -236,7 +220,7 @@ padding: 0px;
 position: absolute;
 width: 133px;
 height: 38px;
-left: 990px;
+/* left: 990px; */
 top: 590px;
 right:675px;
 bottom:1425px;
@@ -253,7 +237,7 @@ padding: 0px;
 position: absolute;
 width: 133px;
 height: 38px;
-left: 757px;
+/* left: 757px; */
 top: 1775px;
 right:910px;
 bottom:192px;
@@ -285,8 +269,8 @@ border-radius: 5px;
   position: absolute;
   width: 105px;
   height: 16px;
-  left: 848px;
-  right: 847px;
+  /* left: 848px;
+  right: 847px; */
   bottom: 146px;
   top: 1818px;
   

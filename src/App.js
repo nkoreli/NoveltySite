@@ -32,39 +32,43 @@ const App = () => {
     <div
       style={{
         backgroundColor: "#000000",
-        width: windowDimensions.width,
-        height: '280vh',
-        display:'flex',
-        justifyContent:'center'
+        width: '100%',
+        height: '300vh',
+        display: 'flex',
+        justifyContent: 'center',
       }}
     >
 
-      <BackgroundMain src={"./images/Background.png"} alt={"Background"} />
-      <PhoneImg1 src={"./images/Phone_Img1.png"} alt={"Phone_Img1"} />
-      <NoveltyGlasses src={"./images/Glasses.png"} alt={"Glasses"} />
-      <NoveltyText />
-      <NoveltyPhrase />
-      <NoveltyTodayApp />
-      <PhoneImg2 src={"./images/Phone_Img2.png"} alt={"PhoneImg2"} />
-      <PhoneImg3 src={"./images/Phone_Img3.png"} alt={"PhoneImg3"} />
-      <NoveltyText2 />
-      <NoveltyText3 />
-      <NoveltyText4 />
-      <CopyRight />
-      <NoveltyDevelopment />
+      <BackgroundMain windowDimensions={windowDimensions} src={"./images/Background.png"} alt={"Background"} />
+      <PhoneImg1 windowDimensions={windowDimensions} src={"./images/Phone_Img1.png"} alt={"Phone_Img1"} />
+      <NoveltyGlasses windowDimensions={windowDimensions} src={"./images/Glasses.png"} alt={"Glasses"} />
+      <NoveltyText windowDimensions={windowDimensions} />
+      <NoveltyPhrase windowDimensions={windowDimensions} />
+      <NoveltyTodayApp windowDimensions={windowDimensions} />
+      <PhoneImg2 windowDimensions={windowDimensions} src={"./images/Phone_Img2.png"} alt={"PhoneImg2"} />
+      <PhoneImg3 windowDimensions={windowDimensions} src={"./images/Phone_Img3.png"} alt={"PhoneImg3"} />
+      <NoveltyText2 windowDimensions={windowDimensions} />
+      <NoveltyText3 windowDimensions={windowDimensions} />
+      <NoveltyText4 windowDimensions={windowDimensions} />
+      <CopyRight windowDimensions={windowDimensions} />
+      <NoveltyDevelopment windowDimensions={windowDimensions} />
       <AppStoreFrame1
+        windowDimensions={windowDimensions}
         src={"./images/AppStoreFrame1.png"}
         alt={"AppStoreFrame1"}
       />
       <AppStoreFrame2
+        windowDimensions={windowDimensions}
         src={"./images/AppStoreFrame2.png"}
         alt={"AppStoreFrame2"}
       />
       <GoogleStoreFrame1
+        windowDimensions={windowDimensions}
         src={"./images/GoogleStoreFrame1.png"}
         alt={"GoogleStoreFrame1"}
       />
       <GoogleStoreFrame2
+        windowDimensions={windowDimensions}
         src={"./images/GoogleStoreFrame2.png"}
         alt={"GoogleStoreFrame2"}
       />
@@ -75,23 +79,23 @@ const App = () => {
 
 
 
-const BackgroundMain = ({ src, alt }) => {
-  return <img className="BackgroundMain" src={src} alt={alt} />;
+const BackgroundMain = ({ windowDimensions, src, alt }) => {
+  return <img style={{ width: windowDimensions.width - 40 }} className="BackgroundMain" src={src} alt={alt} />;
 };
-const PhoneImg1 = ({ src, alt }) => {
-  return <img className="PhoneImg1" src={src} alt={alt} />;
-};
-
-const PhoneImg2 = ({ src, alt }) => {
-  return <img className="PhoneImg2" src={src} alt={alt} />;
+const PhoneImg1 = ({ windowDimensions, src, alt }) => {
+  return <img style={{ left: windowDimensions.width / 3 - 700 }} className="PhoneImg1" src={src} alt={alt} />;
 };
 
-const PhoneImg3 = ({ src, alt }) => {
-  return <img className="PhoneImg3" src={src} alt={alt} />;
+const PhoneImg2 = ({ windowDimensions, src, alt }) => {
+  return <img style={{ left: windowDimensions.width / 3 + 250 }} className="PhoneImg2" src={src} alt={alt} />;
 };
 
-const NoveltyGlasses = ({ src, alt }) => {
-  return <img className="NoveltyGlasses" src={src} alt={alt} />;
+const PhoneImg3 = ({ windowDimensions, src, alt }) => {
+  return <img style={{ left: windowDimensions.width / 3 - 200 }} className="PhoneImg3" src={src} alt={alt} />;
+};
+
+const NoveltyGlasses = ({ windowDimensions, src, alt }) => {
+  return <img style={{ left: windowDimensions.width / 2 - 130 }} className="NoveltyGlasses" src={src} alt={alt} />;
 };
 
 // const text = ({style,text})=>{
@@ -100,23 +104,23 @@ const NoveltyGlasses = ({ src, alt }) => {
 //   );
 // }
 
-const NoveltyText = () => {
-  return <h1 className="NoveltyText">novelty</h1>;
+const NoveltyText = ({ windowDimensions }) => {
+  return <h1 style={{ left: windowDimensions.width / 2  }} className="NoveltyText">novelty</h1>;
 };
 
-const NoveltyText2 = () => {
+const NoveltyText2 = ({ windowDimensions }) => {
   return (
-    <h2 className="NoveltyText2">
+    <h2 style={{ left: windowDimensions.width / 3 - 200 }} className="NoveltyText2">
       Build meaningful relationships through giving and receiving authentic
       feedback.
     </h2>
   );
 };
 
-const NoveltyText3 = () => {
+const NoveltyText3 = ({ windowDimensions }) => {
   return (
-    <div>
-      <h1 className="NoveltyText3">
+    <div >
+      <h1 style={{ left: windowDimensions.width / 3 + 100 }} className="NoveltyText3">
         {" "}
         <span style={{ color: " #FFB000" }}>Track&nbsp;</span>your&nbsp;
         <span style={{ color: "#ff28b9" }}>relationship&nbsp;</span>
@@ -124,13 +128,13 @@ const NoveltyText3 = () => {
     </div>
   );
 };
-const NoveltyDevelopment = () => {
-  return <h1 className="NoveltyDevelopment">development</h1>;
+const NoveltyDevelopment = ({ windowDimensions }) => {
+  return <h1 style={{ left: windowDimensions.width / 3 + 100 }} className="NoveltyDevelopment">development</h1>;
 };
-const NoveltyText4 = () => {
+const NoveltyText4 = ({ windowDimensions }) => {
   return (
-    <div>
-      <h4 className="NoveltyText4">
+    <div >
+      <h4 style={{ left: windowDimensions.width / 3 + 100 }} className="NoveltyText4">
         From&nbsp;
         <span style={{ color: "#FF8C00" }}>connections&nbsp;</span>
         to&nbsp;
@@ -140,60 +144,60 @@ const NoveltyText4 = () => {
   );
 };
 
-const NoveltyPhrase = () => {
-  return <h1 className="NoveltyPhrase">Meet people who share your passion</h1>;
+const NoveltyPhrase = ({ windowDimensions }) => {
+  return <h1 style={{ left: windowDimensions.width / 3 + 100 }} className="NoveltyPhrase">Meet people who share your passion</h1>;
 };
-const NoveltyTodayApp = () => {
-  return <h6 className="NoveltyTodayApp">novelty today app</h6>;
+const NoveltyTodayApp = ({ windowDimensions }) => {
+  return <h6 style={{ left: windowDimensions.width / 3 + 100 }} className="NoveltyTodayApp">novelty today app</h6>;
 };
-const CopyRight = () => {
-  return <h6 className="CopyRight">© 2021 Novelty</h6>;
+const CopyRight = ({ windowDimensions }) => {
+  return <h6 style={{ left: windowDimensions.width / 2 - 45 }} className="CopyRight">© 2021 Novelty</h6>;
 };
 
-const AppStoreFrame1 = ({ src, alt }) => {
+const AppStoreFrame1 = ({ windowDimensions, src, alt }) => {
   return (
     <a
       href="https://apps.apple.com/us/app/novelty-today/id1563260378"
       target="_blank"
       rel="noreferrer"
     >
-      <img className="AppStoreFrame1" src={src} alt={alt} />
+      <img style={{ left: windowDimensions.width / 3 + 100 }} className="AppStoreFrame1" src={src} alt={alt} />
     </a>
   );
 };
 
-const AppStoreFrame2 = ({ src, alt }) => {
+const AppStoreFrame2 = ({ windowDimensions, src, alt }) => {
   return (
     <a
       href="https://apps.apple.com/us/app/novelty-today/id1563260378"
       target="_blank"
       rel="noreferrer"
     >
-      <img className="AppStoreFrame2" src={src} alt={alt} />
+      <img style={{ left: windowDimensions.width / 2 - 133 }} className="AppStoreFrame2" src={src} alt={alt} />
     </a>
   );
 };
 
-const GoogleStoreFrame1 = ({ src, alt }) => {
+const GoogleStoreFrame1 = ({ windowDimensions, src, alt }) => {
   return (
     <a
       href="https://play.google.com/store/apps/details?id=com.test.novelty"
       target="_blank"
       rel="noreferrer"
     >
-      <img className="GoogleStoreFrame1" src={src} alt={alt} />
+      <img style={{ left: windowDimensions.width / 3 + 250 }} className="GoogleStoreFrame1" src={src} alt={alt} />
     </a>
   );
 };
 
-const GoogleStoreFrame2 = ({ src, alt }) => {
+const GoogleStoreFrame2 = ({ windowDimensions, src, alt }) => {
   return (
     <a
       href="https://play.google.com/store/apps/details?id=com.test.novelty"
       target="_blank"
       rel="noreferrer"
     >
-      <img className="GoogleStoreFrame2" src={src} alt={alt} />
+      <img style={{ left: windowDimensions.width / 2 + 20 }} className="GoogleStoreFrame2" src={src} alt={alt} />
     </a>
   );
 };
