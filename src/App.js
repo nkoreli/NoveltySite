@@ -22,7 +22,9 @@ const App = () => {
   };
 
   useEffect(() => {
-    handleResize()
+    setTimeout(() => {      
+      handleResize()
+    }, 500);
     window.addEventListener("resize", handleResize);
     // window.addEventListener("scroll", () => { console.log('sds') });
     return () => window.removeEventListener("resize", handleResize);
@@ -80,7 +82,7 @@ const App = () => {
 
 
 const BackgroundMain = ({ windowDimensions, src, alt }) => {
-  return <img style={{ width: windowDimensions.width - 40 }} className="BackgroundMain" src={src} alt={alt} />;
+  return <img style={{ width: windowDimensions.width - 20 }} className="BackgroundMain" src={src} alt={alt} />;
 };
 const PhoneImg1 = ({ windowDimensions, src, alt }) => {
   return <img style={{ left: windowDimensions.width / 3 - 700 }} className="PhoneImg1" src={src} alt={alt} />;
@@ -120,8 +122,7 @@ const NoveltyText2 = ({ windowDimensions }) => {
 const NoveltyText3 = ({ windowDimensions }) => {
   return (
     <div >
-      <h1 style={{ left: windowDimensions.width / 3 + 100 }} className="NoveltyText3">
-        {" "}
+      <h1 style={{ left: windowDimensions.width / 3 + 100, width:windowDimensions.width/2 }} className="NoveltyText3">
         <span style={{ color: " #FFB000" }}>Track&nbsp;</span>your&nbsp;
         <span style={{ color: "#ff28b9" }}>relationship&nbsp;</span>
       </h1>

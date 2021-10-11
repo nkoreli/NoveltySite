@@ -14,7 +14,11 @@
   height: 800px;
   background: #C4C4C4;
   border-radius: 30px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
+  position: absolute;
+  width: 1780px;
+  left: 10px;
+  top: 10px;
   }
 
 .PhoneImg1{
@@ -96,7 +100,7 @@ color: #FFFFFF;
 
 .NoveltyText3{
   position: absolute;
-width: 500px;
+/* width: 500px; */
 height: 136px;
 /* left: 839px; */
 top: 1241px;
@@ -288,6 +292,52 @@ border-radius: 5px;
   
   color: #FFFFFF;
   
+}
+
+
+
+@media (max-width:1020px)  { 
+  .BackgroundMain {
+    width: 875px !important;
+  }
+  .NoveltyPhrase{
+    font-size: 50px;
+    width: 420px;
+  }
+  .NoveltyDevelopment{
+    width: 420px;
+    font-size: 40px;
+  }
+  .NoveltyText3{
+    font-size: 45px;
+  }
+}
+
+@media (max-width:760px)  { /* smartphones, iPhone, portrait 480x320 phones */
+  .BackgroundMain {
+    width: 695px !important;
+  }
+  .NoveltyPhrase{
+    font-size: 45px;
+    width: 360px;
+  }
+  .NoveltyDevelopment{
+    font-size: 45px;
+    width: 300px;
+  }
+  .NoveltyText2{
+    width: 400px;
+    font-size: 25px;
+  }
+  .NoveltyText3{
+    width: 300px;
+    flex-wrap: wrap;
+    top: 1200px;
+  }
+  .PhoneImg2 {
+    left: 455px !important;
+    width: 260px;
+  }
 }
 
 
