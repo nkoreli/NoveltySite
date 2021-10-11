@@ -273,8 +273,7 @@ border-radius: 5px;
   position: absolute;
   width: 105px;
   height: 16px;
-  /* left: 848px;
-  right: 847px; */
+  padding-bottom: 40px;
   bottom: 146px;
   top: 1818px;
   
@@ -297,9 +296,7 @@ border-radius: 5px;
 
 
 @media (max-width:1020px)  { 
-  .BackgroundMain {
-    width: 875px !important;
-  }
+
   .NoveltyPhrase{
     font-size: 50px;
     width: 420px;
