@@ -11,8 +11,6 @@ function getWindowDimensions() {
   };
 }
 
-
-
 const App = () => {
   const [windowDimensions, setWindowDimensions] = useState(
     getWindowDimensions()
@@ -22,11 +20,10 @@ const App = () => {
   };
 
   useEffect(() => {
-    setTimeout(() => {      
-      handleResize()
+    setTimeout(() => {
+      handleResize();
     }, 500);
     window.addEventListener("resize", handleResize);
-    // window.addEventListener("scroll", () => { console.log('sds') });
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -34,21 +31,40 @@ const App = () => {
     <div
       style={{
         backgroundColor: "#000000",
-        width: '100%',
-        height: '300vh',
-        display: 'flex',
-        justifyContent: 'center',
+        width: "100%",
+        height: "300vh",
+        display: "flex",
+        justifyContent: "center",
       }}
     >
-
-      <BackgroundMain windowDimensions={windowDimensions} src={"./images/Background.png"} alt={"Background"} />
-      <PhoneImg1 windowDimensions={windowDimensions} src={"./images/Phone_Img1.png"} alt={"Phone_Img1"} />
-      <NoveltyGlasses windowDimensions={windowDimensions} src={"./images/Glasses.png"} alt={"Glasses"} />
+      <BackgroundMain
+        windowDimensions={windowDimensions}
+        src={"./images/Background.png"}
+        alt={"Background"}
+      />
+      <PhoneImg1
+        windowDimensions={windowDimensions}
+        src={"./images/Phone_Img1.png"}
+        alt={"Phone_Img1"}
+      />
+      <NoveltyGlasses
+        windowDimensions={windowDimensions}
+        src={"./images/Glasses.png"}
+        alt={"Glasses"}
+      />
       <NoveltyText windowDimensions={windowDimensions} />
       <NoveltyPhrase windowDimensions={windowDimensions} />
       <NoveltyTodayApp windowDimensions={windowDimensions} />
-      <PhoneImg2 windowDimensions={windowDimensions} src={"./images/Phone_Img2.png"} alt={"PhoneImg2"} />
-      <PhoneImg3 windowDimensions={windowDimensions} src={"./images/Phone_Img3.png"} alt={"PhoneImg3"} />
+      <PhoneImg2
+        windowDimensions={windowDimensions}
+        src={"./images/Phone_Img2.png"}
+        alt={"PhoneImg2"}
+      />
+      <PhoneImg3
+        windowDimensions={windowDimensions}
+        src={"./images/Phone_Img3.png"}
+        alt={"PhoneImg3"}
+      />
       <NoveltyText2 windowDimensions={windowDimensions} />
       <NoveltyText3 windowDimensions={windowDimensions} />
       <NoveltyText4 windowDimensions={windowDimensions} />
@@ -74,45 +90,78 @@ const App = () => {
         src={"./images/GoogleStoreFrame2.png"}
         alt={"GoogleStoreFrame2"}
       />
-
     </div>
   );
 };
 
-
-
 const BackgroundMain = ({ windowDimensions, src, alt }) => {
-  return <img style={{ width: windowDimensions.width - 20 }} className="BackgroundMain" src={src} alt={alt} />;
+  return (
+    <img
+      style={{ width: windowDimensions.width - 20 }}
+      className="BackgroundMain"
+      src={src}
+      alt={alt}
+    />
+  );
 };
 const PhoneImg1 = ({ windowDimensions, src, alt }) => {
-  return <img style={{ left: windowDimensions.width / 3 - 700 }} className="PhoneImg1" src={src} alt={alt} />;
+  return (
+    <img
+      style={{ left: windowDimensions.width / 3 - 700 }}
+      className="PhoneImg1"
+      src={src}
+      alt={alt}
+    />
+  );
 };
 
 const PhoneImg2 = ({ windowDimensions, src, alt }) => {
-  return <img style={{ left: windowDimensions.width / 3 + 250 }} className="PhoneImg2" src={src} alt={alt} />;
+  return (
+    <img
+      style={{ left: windowDimensions.width / 3 + 250 }}
+      className="PhoneImg2"
+      src={src}
+      alt={alt}
+    />
+  );
 };
 
 const PhoneImg3 = ({ windowDimensions, src, alt }) => {
-  return <img style={{ left: windowDimensions.width / 3 - 200 }} className="PhoneImg3" src={src} alt={alt} />;
+  return (
+    <img
+      style={{ left: windowDimensions.width / 3 - 200 }}
+      className="PhoneImg3"
+      src={src}
+      alt={alt}
+    />
+  );
 };
 
 const NoveltyGlasses = ({ windowDimensions, src, alt }) => {
-  return <img style={{ left: windowDimensions.width / 2 - 130 }} className="NoveltyGlasses" src={src} alt={alt} />;
+  return (
+    <img
+      style={{ left: windowDimensions.width / 2 - 130 }}
+      className="NoveltyGlasses"
+      src={src}
+      alt={alt}
+    />
+  );
 };
 
-// const text = ({style,text})=>{
-//   return (
-//     <h1 className={style}>{text} </h1>
-//   );
-// }
-
 const NoveltyText = ({ windowDimensions }) => {
-  return <h1 style={{ left: windowDimensions.width / 2  }} className="NoveltyText">novelty</h1>;
+  return (
+    <h1 style={{ left: windowDimensions.width / 2 }} className="NoveltyText">
+      novelty
+    </h1>
+  );
 };
 
 const NoveltyText2 = ({ windowDimensions }) => {
   return (
-    <h2 style={{ left: windowDimensions.width / 3 - 200 }} className="NoveltyText2">
+    <h2
+      style={{ left: windowDimensions.width / 3 - 200 }}
+      className="NoveltyText2"
+    >
       Build meaningful relationships through giving and receiving authentic
       feedback.
     </h2>
@@ -121,8 +170,14 @@ const NoveltyText2 = ({ windowDimensions }) => {
 
 const NoveltyText3 = ({ windowDimensions }) => {
   return (
-    <div >
-      <h1 style={{ left: windowDimensions.width / 3 + 100, width:windowDimensions.width/2 }} className="NoveltyText3">
+    <div>
+      <h1
+        style={{
+          left: windowDimensions.width / 3 + 100,
+          width: windowDimensions.width / 2,
+        }}
+        className="NoveltyText3"
+      >
         <span style={{ color: " #FFB000" }}>Track&nbsp;</span>your&nbsp;
         <span style={{ color: "#ff28b9" }}>relationship&nbsp;</span>
       </h1>
@@ -130,12 +185,22 @@ const NoveltyText3 = ({ windowDimensions }) => {
   );
 };
 const NoveltyDevelopment = ({ windowDimensions }) => {
-  return <h1 style={{ left: windowDimensions.width / 3 + 100 }} className="NoveltyDevelopment">development</h1>;
+  return (
+    <h1
+      style={{ left: windowDimensions.width / 3 + 100 }}
+      className="NoveltyDevelopment"
+    >
+      development
+    </h1>
+  );
 };
 const NoveltyText4 = ({ windowDimensions }) => {
   return (
-    <div >
-      <h4 style={{ left: windowDimensions.width / 3 + 100 }} className="NoveltyText4">
+    <div>
+      <h4
+        style={{ left: windowDimensions.width / 3 + 100 }}
+        className="NoveltyText4"
+      >
         From&nbsp;
         <span style={{ color: "#FF8C00" }}>connections&nbsp;</span>
         to&nbsp;
@@ -146,13 +211,31 @@ const NoveltyText4 = ({ windowDimensions }) => {
 };
 
 const NoveltyPhrase = ({ windowDimensions }) => {
-  return <h1 style={{ left: windowDimensions.width / 3 + 100 }} className="NoveltyPhrase">Meet people who share your passion</h1>;
+  return (
+    <h1
+      style={{ left: windowDimensions.width / 3 + 100 }}
+      className="NoveltyPhrase"
+    >
+      Meet people who share your passion
+    </h1>
+  );
 };
 const NoveltyTodayApp = ({ windowDimensions }) => {
-  return <h6 style={{ left: windowDimensions.width / 3 + 100 }} className="NoveltyTodayApp">novelty today app</h6>;
+  return (
+    <h6
+      style={{ left: windowDimensions.width / 3 + 100 }}
+      className="NoveltyTodayApp"
+    >
+      novelty today app
+    </h6>
+  );
 };
 const CopyRight = ({ windowDimensions }) => {
-  return <h6 style={{ left: windowDimensions.width / 2 - 45 }} className="CopyRight">© 2021 Novelty</h6>;
+  return (
+    <h6 style={{ left: windowDimensions.width / 2 - 45 }} className="CopyRight">
+      © 2021 Novelty
+    </h6>
+  );
 };
 
 const AppStoreFrame1 = ({ windowDimensions, src, alt }) => {
@@ -162,7 +245,12 @@ const AppStoreFrame1 = ({ windowDimensions, src, alt }) => {
       target="_blank"
       rel="noreferrer"
     >
-      <img style={{ left: windowDimensions.width / 3 + 100 }} className="AppStoreFrame1" src={src} alt={alt} />
+      <img
+        style={{ left: windowDimensions.width / 3 + 100 }}
+        className="AppStoreFrame1"
+        src={src}
+        alt={alt}
+      />
     </a>
   );
 };
@@ -174,7 +262,12 @@ const AppStoreFrame2 = ({ windowDimensions, src, alt }) => {
       target="_blank"
       rel="noreferrer"
     >
-      <img style={{ left: windowDimensions.width / 2 - 133 }} className="AppStoreFrame2" src={src} alt={alt} />
+      <img
+        style={{ left: windowDimensions.width / 2 - 133 }}
+        className="AppStoreFrame2"
+        src={src}
+        alt={alt}
+      />
     </a>
   );
 };
@@ -186,7 +279,12 @@ const GoogleStoreFrame1 = ({ windowDimensions, src, alt }) => {
       target="_blank"
       rel="noreferrer"
     >
-      <img style={{ left: windowDimensions.width / 3 + 250 }} className="GoogleStoreFrame1" src={src} alt={alt} />
+      <img
+        style={{ left: windowDimensions.width / 3 + 250 }}
+        className="GoogleStoreFrame1"
+        src={src}
+        alt={alt}
+      />
     </a>
   );
 };
@@ -198,7 +296,12 @@ const GoogleStoreFrame2 = ({ windowDimensions, src, alt }) => {
       target="_blank"
       rel="noreferrer"
     >
-      <img style={{ left: windowDimensions.width / 2 + 20 }} className="GoogleStoreFrame2" src={src} alt={alt} />
+      <img
+        style={{ left: windowDimensions.width / 2 + 20 }}
+        className="GoogleStoreFrame2"
+        src={src}
+        alt={alt}
+      />
     </a>
   );
 };
