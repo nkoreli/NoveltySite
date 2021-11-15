@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
-// NoveltyTodayApp
+//  NoveltyTodayApp
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
