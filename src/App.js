@@ -32,7 +32,7 @@ const App = () => {
       style={{
         backgroundColor: "#000000",
         width: "100%",
-        height: "300vh",
+        // height: '300vh',
         display: "flex",
         justifyContent: "center",
       }}
